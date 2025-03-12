@@ -7,6 +7,6 @@ pound = kilo * 2.20462
 print(float(pound), "파운드 입니다.")
 
 ban = float(input("반지름을 입력하십시오.: "))
-pi = 3.14
-circle = ban * pi
+pi = 3
+circle = ban ** 2 * pi
 print("넓이는", float(circle), "입니다.")
