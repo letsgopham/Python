@@ -15,6 +15,10 @@ if answer == 1:
     c = input('수식을 입력하세요: ')
     d = eval(c)
     print("%s 결과는 %5.1f입니다." %(c, d))
+
+else:
+    print('error')
+    
     
     
 
