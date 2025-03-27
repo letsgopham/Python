@@ -1,5 +1,5 @@
-select = int(input('입력 진수 결정(16,10,8.2): '))
-num = int(input('값 입력: '), select)
+select = int(input('입력 진수 결정(16, 10, 8, 2): '))
+num = int(input('값 입력: '), select) # int(A, 16) ==> 뒤에 있는 수의 진법으로 변환.
 num_hex = hex(num)
 num_dec = num
 num_oct = oct(num)
