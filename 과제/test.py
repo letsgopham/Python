@@ -13,7 +13,7 @@ if answer == 2:
 elif answer == 1:
     question = input('수식을 입력하세요: ')
     calculate = eval(question)
-    print("%s 결과는 %5.1f입니다." %(question, calculate))
+    print(f"{question}의 결과는 {calculate}입니다.")
     
 else:
     print('error!!!!\n1 or 2만 입력하세요!')

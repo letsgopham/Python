@@ -1,28 +1,31 @@
-inch = float(input("인치를 입력하십시오.: "))
-cm = inch * 2.54
-print(float(cm), 'cm 입니다.')
+import turtle
 
-kilo = float(input("키로그램을 입력하십시오: "))
-pound = kilo * 2.20462
-print(float(pound), "파운드 입니다.")
+swidth, sheight = 500, 500
 
-ban = float(input("반지름을 입력하십시오.: "))
-pi = 3.14
-circle = ban ** 2 * pi
-print("넓이는", float(circle), "입니다.")
+turtle.title('무지개색 원 그리기')
+turtle.shape('turtle')
+turtle.setup(swidth + 50, height = sheight + 50)
+turtle.screensize(swidth, sheight)
+turtle.penup()
+turtle.goto(0, -sheight/2)
+turtle.pendown()
+turtle.speed(10)
 
-answers = {'예', "네", "yes", "합격", "응", "넵"}
-attempts = 0
-while True:
-    junseo = input("배준서는 컴퓨터과학과 학생회 인클루드에 합격했을까요?:")
-    if junseo in answers:
-        print("정답입니다.")
-        break
+for radius in range(1, 250):
+    if radius % 6 == 0:
+        turtle.pencolor('red')
+    elif radius % 5 == 0:
+        turtle.pencolor('orange')
+    elif radius % 4 == 0:
+        turtle.pencolor('yellow')
+    elif radius % 3 == 0:
+        turtle.pencolor('green')
+    elif radius % 2 == 0:
+        turtle.pencolor('blue')
+    elif radius % 1 == 0:
+        turtle.pencolor('navyblue')
     else:
-       print("오답입니다. 다시 시도하세요.")
-       attempts += 1
+        turtle.pencolor('purple')
 
-    if attempts >= 3:
-        print("나중에 시도하십시오.")
-        break
-       
+    turtle.circle(radius)
+turtle.done()
