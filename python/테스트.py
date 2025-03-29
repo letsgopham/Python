@@ -1,13 +1,20 @@
-import random
+import time
 
-guess = int(input('1과 10 사이의 수를 선택해 주세요: '))
-num = random.randint(1, 10)
+answers = {'junseo', '준서', 'baejunseo', '배준서'}
+attempts = 0
 
-if guess == num:
-    print('축하합니다! 당신이 이겼습니다!')
+while True:
+    question = input('나의 이름은?: ')
+    if question in answers:
+        print('정답.')
+        break
+    elif question == '존잘':
+        input('계좌를 입력해주세요! ㅎㅎ: ')
+        break
+    else:
+        print('오답.')
+        attempts += 1
 
-elif guess >= 11:
-    print('1과 10 사이의 숫자를 입력해주십시오.')
-
-else:
-    print('하하하하')
+    if attempts >= 5:
+        print('나중에 다시 시도해주세요.')
+        time.sleep(60)
