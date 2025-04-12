@@ -15,7 +15,7 @@ def api(x, y, radius):
     }
 
     head = {
-        "Authorization": "KakaoAK 1a251a6ce8afd58ca6fd538cfefab12b"
+        "Authorization": "KakaoAK {Your API KEY}"
     }
 
     res = requests.get(url, params=search_info, headers=head)
@@ -42,7 +42,7 @@ def restaurants(places):
     
 def restaurant_df(restaurant_list):
     df = pd.DataFrame(restaurant_list)
-    print(df.to_string(index=False))
+    print(df)
 
 def main():
     y = input('위도: ')
