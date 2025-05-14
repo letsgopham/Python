@@ -1,26 +1,15 @@
-answers = ['a', 'b', 'd']
+inFp = None
+inStr = ""
 
-while True:
-     
-     answer = input("""요즘 내가 꽂힌 노래를 모두 고르시오.(정답을 입력할 때는 띄어서 입력해주세요.)
-a) Smoking Dreams  b) 날씨의 요정  c) Pink + White  d) Disco Yes  e) peach eyes : """)
-     print()
-     
-     selected = answer.split( )
-     selected.sort()
+inFp = open("C:\\Users\\Administrator\\OneDrive\\바탕 화면\\python실습\\.dist\\FileTest\\data1.txt", "r", encoding='UTF8')
 
-     if answers == selected:
-          print("정답.")
-          break
+inStr = inFp.readline()
+print(inStr, end="")
 
-     elif selected.count('e') >= 1:
-          print("오답.")
-          print()
-          
-     elif selected.count('c') >= 1:
-          print("오답.")
-          print()
+inStr = inFp.readline()
+print(inStr, end="")
 
-     else:
-          print("========모두 고르시오.========")
-          print()
+inStr = inFp.readline()
+print(inStr, end="")
+
+inFp.close()
