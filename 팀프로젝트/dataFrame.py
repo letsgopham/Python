@@ -5,6 +5,6 @@ import pandas as pd
 pd.set_option('display.unicode.east_asian_width', True)
 pd.set_option('display.width', 150)
 
-def rest_df(rest_list):
-    df = pd.DataFrame(rest_list)
+def restaurant_DataFrame(filtered_places):
+    df = pd.DataFrame(filtered_places)
     print(df)
