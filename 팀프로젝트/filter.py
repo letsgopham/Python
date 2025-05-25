@@ -11,21 +11,23 @@ def filter_restaurant(places, selected_category):
                 "Address": place.get("address_name", "N/A"),
                 "Distance": place.get("distance", "N/A") + "m",
                 "Category": place.get("category_name", "N/A"),
-                "Phone": place.get("phone", "N/A")
+                "Phone": place.get("phone", "N/A"),
+                "Kakao Map URL": place.get("place_url", "N/A")
             }
             filtered_places.append(restaurant_dict)
-        
+    
     if not filtered_places:
-        print("입력하신 카테고리가 검색되지 않았습니다. 가까운 순으로 다른 음식점을 추천합니다.")
+        print("\033[31m 입력하신 카테고리가 검색되지 않았습니다. 가까운 순으로 다른 음식점을 추천합니다.\033[0m")
+        print()
         for place in places:
             restaurant_dict = {
                 "Place Name": place.get("place_name", 'N/A'),
                 "Address": place.get("address_name", "N/A"),
                 "Distance": place.get("distance", "N/A") + "m",
                 "Category": place.get("category_name", "N/A"),
-                "Phone": place.get("phone", "N/A")
+                "Phone": place.get("phone", "N/A"),
+                "Kakao Map URL": place.get("place_url", "N/A")
             }
             filtered_places.append(restaurant_dict)
 
-    
     return filtered_places

@@ -1,8 +1,11 @@
 inFp, outFp = None, None
 inStr = ""
 
-inFp = open("/Users/junseo/Desktop/plz-plz-plz/plz-plz-plz-1/수업/FileTest/data2.txt", "r")
-outFp = open("/Users/junseo/Desktop/plz-plz-plz/plz-plz-plz-1/수업/FileTest/data1.txt", "w")
+fname1 = input('소스 파일명 입력:')
+fname2 = input('타깃 파일명 입력:')
+
+inFp = open(fname1, "r")
+outFp = open(fname2, "w")
 
 inList = inFp.readlines()
 for inStr in inList:

@@ -11,8 +11,8 @@ class people:
         print(f'Hello my name is {self.name}, and {self.age} years old and work as a {self.job}.')
 
 
-name = input('이름을 입력하세요.: ')
-age = int(input('나이를 입력하세요.: '))
+name = input('이름을 입력하세요: ')
+age = int(input('나이를 입력하세요: '))
 
 user = people(name, age)
 

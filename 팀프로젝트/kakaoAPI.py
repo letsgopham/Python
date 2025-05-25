@@ -16,11 +16,11 @@ def api(x, y, radius):
         "Authorization": "KakaoAK 1a251a6ce8afd58ca6fd538cfefab12b"
     }
 
-    res = requests.get(url, params=search_info, headers=headers)
+    result = requests.get(url, params=search_info, headers=headers)
 
-    if res.status_code == 200:
-        return res.json()["documents"]
+    if result.status_code == 200:
+        return result.json()["documents"]
     
     else:
-        print("API 요청 실패:", res.status_code)
-        print("응답 내용:", res.text)
+        print("API 요청 실패:", result.status_code)
+        print("응답 내용:", result.text)
