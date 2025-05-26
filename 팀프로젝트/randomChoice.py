@@ -9,8 +9,11 @@ def random_choice(random_list):
     if not random_list:
         print("추천할 음식점이 없습니다.")
         return
-    choice = input('랜덤 추천을 해드릴까요? (예/아니오): ')
-    print()
+    try:
+        choice = input('랜덤 추천을 해드릴까요? (예/아니오): ')
+        print()
+    except:
+        pass
     
     def Choice():
         if choice in response:
@@ -29,17 +32,23 @@ def random_choice(random_list):
             print(f'번호: {phone}')
             print(f'카카오맵 바로 가기: {Kakao_URL}')
             
-            Save = input('이 집을 리스트에 저장 하시겠습니까?: ')
-            if Save in response:
-                save(name)
+            try:
+                Save = input('이 집을 리스트에 저장 하시겠습니까?: ')
+                if Save in response:
+                    save(name)
+            except:
+                pass
                 
         else:
             sys.exit('\033[34m\033[1m프로그램을 종료합니다.\033[0m')
 
-        retry = input('다시 추첨할까요?: ')
-        if retry in response:
-            print('{0:=^55}'.format(""))
-            Choice()
-        else:
-            print('\033[34m\033[1m프로그램을 종료합니다.\033[0m')
+        try:
+            retry = input('다시 추첨할까요?: ')
+            if retry in response:
+                print('{0:=^56}'.format(""))
+                Choice()
+            else:
+                print('\033[34m\033[1m프로그램을 종료합니다.\033[0m')
+        except:
+            pass
     Choice()

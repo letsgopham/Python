@@ -10,7 +10,7 @@ geo = geocoder.ip('me')
 def main():
     y = 37.6025 #geo.lat
     x = 126.9553 #geo.lng
-    radius = 500 #int(input('반경(m): '))
+    radius =int(input('반경(m): '))
     selected_category = input("원하는 음식점 종류 (예: 한식 중식 일식): ")
     places = api(x, y, radius)
     random_list = []
