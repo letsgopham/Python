@@ -17,7 +17,8 @@ def filter_restaurant(places, selected_category):
             filtered_places.append(restaurant_dict)
     
     if not filtered_places:
-        print("\033[31m 입력하신 카테고리가 검색되지 않았습니다. 가까운 순으로 다른 음식점을 추천합니다.\033[0m")
+        print("""\033[31m 입력하신 카테고리가 검색되지 않았습니다. 가까운 순으로 다른 음식점을 추천합니다.\n
+        입력하신 반경 내에 음식점이 없을 경우 추천이 되지 않습니다.\033[0m""")
         print()
         for place in places:
             restaurant_dict = {

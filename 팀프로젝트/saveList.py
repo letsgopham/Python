@@ -4,8 +4,8 @@ def save(Input):
     inStr = ""
     save_list = []
 
-    outFp = open("/Users/junseo/Desktop/plz-plz-plz/plz-plz-plz-1/팀프로젝트/저장리스트.txt", "a")
-    inFp = open("/Users/junseo/Desktop/plz-plz-plz/plz-plz-plz-1/팀프로젝트/저장리스트.txt", "r")
+    outFp = open("/Users/junseo/Desktop/Python/팀프로젝트/저장리스트.txt", "a")
+    inFp = open("/Users/junseo/Desktop/Python/팀프로젝트/저장리스트.txt", "r")
 
     while True:
         inStr = inFp.readline()

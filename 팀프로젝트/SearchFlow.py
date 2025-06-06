@@ -1,20 +1,14 @@
-# 메인 프로그램
 from kakaoAPI import api
 from filter import filter_restaurant
 from dataFrame import restaurant_DataFrame
 from randomChoice import random_choice
-import geocoder
-1000
-geo = geocoder.ip('me')
 
-def main():
-    y = 37.6025 #geo.lat
-    x = 126.9553 #geo.lng
-    radius =int(input('반경(m): '))
-    selected_category = input("원하는 음식점 종류 (예: 한식 중식 일식): ")
-    places = api(x, y, radius)
+def search_flow(x, y, radius):
     random_list = []
 
+    selected_category = input("원하는 음식점 종류 (예: 한식 중식 일식): ")
+    places = api(x, y, radius)
+    
     if not selected_category:
         filtered_list = filter_restaurant(places, "")
         restaurant_DataFrame(filtered_list)            
@@ -30,7 +24,9 @@ def main():
             random_list.append(filtered_list)
             print()
 
-    print()
-    random_choice(random_list)
-
-main()
+    a = random_list[0]
+    if not a:
+        print(f'{"":=^30}')
+        print()
+    else:
+        random_choice(random_list)
