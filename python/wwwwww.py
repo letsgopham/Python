@@ -18,7 +18,7 @@ while True:
             print('Only adult!')
             break
     except:
-        print('\033[92mSyntaxError!!!!!\033[0m')
+        print('\033[92mSyntaxError!!!\npleas input integer!!!\033[0m')
         pass
 
     finally:
