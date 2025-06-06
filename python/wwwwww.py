@@ -2,22 +2,24 @@ class people:
     def __init__ (self, name, age):
         self.name = name
         self.age = age
-        self.adult = self.age > 19
-    
-    def is_adult(self):
-        return self.adult
 
-    #def say(self):
-        print(f'Hello my name is {self.name}, and {self.age} years old and work as a {self.job}.')
+while True:
+    try:
+        name = input('Enter your name: ')
+        if name == 'quit':
+            break
+        age = int(input('Enter your age: '))      
+        person1 = people(name, age)
 
+        if person1.age > 19:
+            print(f'{name}, Welcome!')
+            break
+        else:
+            print('Only adult!')
+            break
+    except:
+        print('\033[92mSyntaxError!!!!!\033[0m')
+        pass
 
-name = input('이름을 입력하세요: ')
-age = int(input('나이를 입력하세요: '))
-
-user = people(name, age)
-
-if user.is_adult():
-    print('가입이 완료되었습니다.')
-
-else:
-    print('성인만 가입할 수 있습니다.')
+    finally:
+        print(f'{"":=^20}')
