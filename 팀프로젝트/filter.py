@@ -7,12 +7,12 @@ def filter_restaurant(places, selected_category):
         category = place.get("category_name", "N/A")
         if selected_category in category:
             restaurant_dict = {
-                "Place Name": place.get("place_name", 'N/A'),
-                "Address": place.get("address_name", "N/A"),
-                "Distance": place.get("distance", "N/A") + "m",
-                "Category": place.get("category_name", "N/A"),
-                "Phone": place.get("phone", "N/A"),
-                "Kakao Map URL": place.get("place_url", "N/A")
+                "가게 이름": place.get("place_name", 'N/A'),
+                "주소": place.get("address_name", "N/A"),
+                "거리": place.get("distance", "N/A") + "m",
+                "카테고리": place.get("category_name", "N/A"),
+                "전화번호": place.get("phone", "N/A"),
+                "카카오맵 바로가기": place.get("place_url", "N/A")
             }
             filtered_places.append(restaurant_dict)
     
@@ -22,12 +22,12 @@ def filter_restaurant(places, selected_category):
         print()
         for place in places:
             restaurant_dict = {
-                "Place Name": place.get("place_name", 'N/A'),
-                "Address": place.get("address_name", "N/A"),
-                "Distance": place.get("distance", "N/A") + "m",
-                "Category": place.get("category_name", "N/A"),
-                "Phone": place.get("phone", "N/A"),
-                "Kakao Map URL": place.get("place_url", "N/A")
+                "가게 이름": place.get("place_name", 'N/A'),
+                "주소": place.get("address_name", "N/A"),
+                "거리": place.get("distance", "N/A") + "m",
+                "카테고리": place.get("category_name", "N/A"),
+                "전화번호": place.get("phone", "N/A"),
+                "카카오맵 바로가기": place.get("place_url", "N/A")
             }
             filtered_places.append(restaurant_dict)
 
