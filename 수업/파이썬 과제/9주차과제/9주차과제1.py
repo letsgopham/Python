@@ -14,7 +14,6 @@ shuffle(photoList)
 
 for i in range(0,9):
     photoList[i] = PhotoImage(file= "gif/"+fnameList[i])
-    btnList[i] = Button(window, image=photoList[i], width=270, height=270)
 
 for i in range(0,3):
     for k in range(0,3):
